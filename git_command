@@ -29,11 +29,20 @@
     #예시
     git add git_command
 
-4-1 staging 한번에 업로드
+4-1. staging 한번에 업로드
     git add . or git add -all
 
-4-2 staging 특정 파일만 업로드
+4-2. staging 특정 파일만 업로드
     git add *.py
 
-4-3 staging 수정된 부분만 업로드
+4-3. staging 수정된 부분만 업로드
     git add --patch git_command
+
+5. commit
+    git commit -m "init file"
+
+5-1. 커밋 메시지 수정
+    git commit --amend
+
+6. staging -> repo 업로드
+    git push LABS main
