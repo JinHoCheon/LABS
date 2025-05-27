@@ -1,0 +1,39 @@
+1. 로컬 저장소 설정
+    - mkdir /Users/kakaogames/Documents/git #로컬저장소 디렉토리 신규 생성
+    - cd /Users/kakaogames/Documents/git #로컬저장소 디렉토리 이동
+    - git init
+
+2. 로컬 저장소 git repository 연결
+    2.1. git repo 생성
+        github 접속 -> 왼쪽 상단 new > create repository 
+
+3. 로컬 저장소 -> 원격 저장소 연결 (remote-name 은 원격 저장소에 대한 별칭 , git address는 생성한 레파지토리의 URL 을 복사한 뒤 .git을 올려주면 된다.)
+    git remote add <remote-name> <git address>
+    #예시
+    git remote add git_test https://github.com/sseozy/github_test.git
+    git push -u
+
+3-1. 원격 저장소 확인
+    git remote --verbose
+
+3-2. 원격 저장소 이름 변경
+    git remote rename <old-remote-name> <new-remote-name>
+    #예시
+    git remote rename git_test new_git_test
+
+3-3. 원격 연결 삭제
+    git remote remove <remote-name>
+
+4. staging 업로드
+    git add <filename>
+    #예시
+    git add git_command
+
+4-1 staging 한번에 업로드
+    git add . or git add -all
+
+4-2 staging 특정 파일만 업로드
+    git add *.py
+
+4-3 staging 수정된 부분만 업로드
+    git add --patch git_command
